@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>demo</title>
+		<meta name="viewport" content="width=300, initial-scale=1.0">
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="../dist/scrollDrag.min.js"></script>
+	</head>
+	<body>
+		<div id="one" style="width:300px;overflow:hidden;">
+			<img src="https://unsplash.it/2000/300" alt="long picture">
+		</div>
+		<div id="two" style="height:300px;overflow:hidden;">
+			<img src="https://unsplash.it/300/2000" alt="long picture">
+		</div>
+		<div id="three" style="width:300px;height:300px;overflow:hidden;">
+			<img src="https://unsplash.it/2000/2000" alt="long picture">
+		</div>
+		<script>
+			$("#one").scrollDrag({
+				horizontal:true,
+				vertical: false,
+			});
+			$("#two").scrolldrag({
+				horizontal:false,
+				vertical: true,
+			});
+			$("#three").scrolldrag({
+				horizontal:true,
+				vertical: true,
+			});
+		</script>
+		<div id="log"></div>
+	</body>
+</html>
